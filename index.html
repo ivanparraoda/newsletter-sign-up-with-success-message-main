@@ -50,14 +50,19 @@
 
         
     <form id="sign" class="form">
-      <div class="form-field error">
-        <label for="mail">Email address</label>
-        <input id="mail" name="mail" type="text" placeholder="email@company.com"  autocomplete="off"/>
-        <small></small>
+      <div class="flex-form">
+        <label for="email">Email address</label>
+        <div id="error-msj"></div>
+        
       </div>
+
+      <div class="form-field ">
+           <input id="email" name="email" type="text" placeholder="email@company.com"  autocomplete="off"/>
+        </div>
+               
       <div class="form-field">
 
-        <input type="submit" value="Subscribe to monthly newsletter">
+        <input  type="submit" value="Subscribe to monthly newsletter" id="submit">
       </div>
       
 
@@ -73,14 +78,14 @@
   
 
   <!-- Success message start -->
-  <div class="success-mes" style="display: none;">
+  <div  class="success-mes" >
     <div class="textup">
       <img src="./assets/images/icon-success.svg" alt="">
       <h2>Thanks for subscribing!</h2>
       <p>A confirmation email has been sent to  <span>ash@loremcompany.com.</span>Please open it and click the button inside to confirm your subscription.</p>
     </div>
     <div class="textup">
-      <input type="submit" value="Dismiss message">
+      <input id="submit" type="submit" value="Dismiss message">
 
     </div>
    
@@ -93,8 +98,7 @@
   
 
   
-
-  <!-- Success message end -->
+    <script src="index.js"></script>
   
 </body>
 </html>

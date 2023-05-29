@@ -101,24 +101,46 @@ background-color: var(--Tomatobg);
 border-color: var(--Tomato);
 }
 
+.textt{
+    display: flex;
+    gap: 20px;
 
-.form-field small {
-    color: var(--Tomato);
 }
+#error-msj {
+    
+    display: inline;
+    bottom: 249px;
+    left: 334px;
+    color: var(--Tomato);
+    font-size: 12px;
+}
+
+.flex-form{
+    display: flex;
+    gap: 45%;
+}
+
 
 
 .success-mes{
     position: fixed;
     top:0;
     left:0;
+    transform:translateX(-100%);
     height:100%;
     background-color: var(--White);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: all 0.2s ease-in-out;
 
     
 }
+
+.success_open{
+    transform:translateX(0%);
+}
+
 
 .textup{
     position: relative;
@@ -151,10 +173,7 @@ border-color: var(--Tomato);
     position: absolute;
     padding: 22px 0px ;
     width: 90%;
-   
     top: 190px;
-  
-    
  }
 
 
@@ -230,6 +249,23 @@ border-color: var(--Tomato);
     .text span{
         margin-right: -22px;
     }
+
+    .textt {
+        /* display: flex; */
+        /* justify-content: space-between; */
+        width: 304px;
+        padding-right: 0px;
+    }
+
+    #error-msj{
+        padding-top: 24px;
+    }
+
+    .flex-form{
+        
+        gap: 37%;
+    }
+    
 
 
 }
