@@ -6,6 +6,7 @@
 
 :root{
     --Tomato: hsl(4, 100%, 67%);
+    --Tomatobg: hsl(5, 56%, 91%);
     --DarkSlateGrey: hsl(234, 29%, 20%);
     --CharcoalGrey: hsl(235, 18%, 26%);
     --Grey: hsl(231, 7%, 60%);
@@ -55,11 +56,11 @@ body{
     
 }
 
-label,input[type="submit"],input[type="email"]{
+label,input[type="submit"],input[type="text"]{
     display: block;
 }
 
-input[type="submit"],input[type="email"]{
+input[type="submit"],input[type="text"]{
     width: 90%;
     margin-bottom: 20px;
 }
@@ -73,7 +74,15 @@ input[type="submit"]{
     border: none;
 }
 
-input[type="email"]{
+
+input[type="submit"]:hover{
+    cursor: pointer;
+    background-image: linear-gradient(to right,rgb(248, 75, 119), rgb(236, 90, 32));
+    box-shadow: rgba(252, 125, 125, 0.445) 0px 15px 25px, rgba(230, 125, 6, 0.397) 0px 5px 10px;
+    
+}
+
+input[type="text"]{
     border: 1px solid var(--Grey);
     margin-bottom: 25px;
    outline: none;
@@ -86,6 +95,17 @@ label{
     font-size: 12px;
     margin-bottom: 20px;
 }
+
+.form-field.error input {
+background-color: var(--Tomatobg);
+border-color: var(--Tomato);
+}
+
+
+.form-field small {
+    color: var(--Tomato);
+}
+
 
 .success-mes{
     position: fixed;
@@ -189,7 +209,7 @@ label{
         margin-top: 24px;
     }
 
-    input[type="email"] {
+    input[type="text"] {
         /* border: 1px solid var(--Grey); */
         margin-bottom: 14px;
         /* outline: none; */
